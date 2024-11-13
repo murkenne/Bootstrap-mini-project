@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <title>Task Management Application</title>
+</head>
+<body>
+
+    <!-- Navbar for intuitive navigation using Bootstrap Navbar and Dropdown menus -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container">
+            <a class="navbar-brand" href="#">TaskManager</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="task-dashboard.html">Dashboard</a></li>
+                    <li class="nav-item"><a class="nav-link" href="task-creation.html">Create Task</a></li>
+                    <li class="nav-item"><a class="nav-link" href="register.html">Register</a></li>
+                    <li class="nav-item"><a class="nav-link" href="authentication.html">Login</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Jumbotron for a welcome message -->
+    <header class="jumbotron bg-primary text-white text-center p-5 mb-4">
+        <div class="container">
+            <h1 class="display-4">Welcome to TaskManager</h1>
+            <p class="lead">Your efficient tool for managing tasks effectively and staying organized.</p>
+        </div>
+    </header>
+
+    <!-- Bootstrap Carousel Component to showcase featured tasks or announcements (Bonus) -->
+    <div id="featuredTasksCarousel" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="img/task1.jpg" class="d-block w-100" alt="Featured Task 1">
+                <div class="carousel-caption d-none d-md-block">
+                    <h5>Featured Task 1</h5>
+                    <p>Stay on top of your important deadlines.</p>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img src="img/task2.jpg" class="d-block w-100" alt="Featured Task 2">
+                <div class="carousel-caption d-none d-md-block">
+                    <h5>Featured Task 2</h5>
+                    <p>Prioritize your tasks with ease.</p>
+                </div>
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#featuredTasksCarousel" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#featuredTasksCarousel" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </div>
+
+    <!-- Cards to display key features with Bootstrap's grid system -->
+    <section class="container my-5">
+        <div class="row">
+            <div class="col-md-4">
+                <div class="card h-100">
+                    <div class="card-body">
+                        <h5 class="card-title">Organize Your Tasks</h5>
+                        <p class="card-text">Keep all your tasks in one place, categorize, and prioritize them with ease.</p>
+                        <span class="badge bg-primary">Feature</span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card h-100">
+                    <div class="card-body">
+                        <h5 class="card-title">Set Reminders</h5>
+                        <p class="card-text">Never miss a deadline again with our built-in reminder system.</p>
+                        <span class="badge bg-success">New</span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card h-100">
+                    <div class="card-body">
+                        <h5 class="card-title">Track Progress</h5>
+                        <p class="card-text">View your task completion history and track your progress over time.</p>
+                        <span class="badge bg-warning">Popular</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

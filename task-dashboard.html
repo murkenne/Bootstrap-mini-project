@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <title>Task Dashboard</title>
+</head>
+<body class="bg-primary">
+   
+    <!-- Navbar for navigation -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">TaskManager</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="task-creation.html">Create Task</a></li>
+                    <li class="nav-item"><a class="nav-link" href="register.html">Register</a></li>
+                    <li class="nav-item"><a class="nav-link" href="authentication.html">Login</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Dashboard Header -->
+    <header class="container my-4">
+        <h2 class="text-center">Task Dashboard</h2>
+        <p class="text-center text-muted">Manage and track all your tasks effectively.</p>
+    </header>
+
+    <!-- Task Cards for displaying tasks -->
+    <div class="container">
+        <div class="row">
+            <!-- Example of a task card -->
+            <div class="col-md-4 mb-4">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Complete Project Report</h5>
+                        <p class="card-text">Due date: Nov 15, 2024</p>
+                        <div class="d-flex justify-content-between align-items-center">
+                            <span class="badge bg-warning text-dark">In Progress</span>
+                            <button class="btn btn-sm btn-primary" data-bs-toggle="modal" data-bs-target="#editTaskModal">Edit</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Repeat task cards as needed -->
+        </div>
+    </div>
+
+    <!-- Add New Task Form -->
+    <section class="container my-5">
+        <h3>Add a New Task</h3>
+        <form>
+            <div class="mb-3">
+                <label for="taskTitle" class="form-label">Task Title</label>
+                <input type="text" class="form-control" id="taskTitle" placeholder="Enter task title" required>
+            </div>
+            <div class="mb-3">
+                <label for="taskDescription" class="form-label">Description</label>
+                <textarea class="form-control" id="taskDescription" rows="3" placeholder="Enter task description"></textarea>
+            </div>
+            <div class="mb-3">
+                <label for="dueDate" class="form-label">Due Date</label>
+                <input type="date" class="form-control" id="dueDate" required>
+            </div>
+            <button type="submit" class="btn btn-success">Add Task</button>
+        </form>
+    </section>
+
+    <!-- Edit Task Modal (for editing existing tasks) -->
+    <div class="modal fade" id="editTaskModal" tabindex="-1" aria-labelledby="editTaskModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="editTaskModalLabel">Edit Task</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="mb-3">
+                            <label for="editTaskTitle" class="form-label">Task Title</label>
+                            <input type="text" class="form-control" id="editTaskTitle" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="editTaskDescription" class="form-label">Description</label>
+                            <textarea class="form-control" id="editTaskDescription" rows="3"></textarea>
+                        </div>
+                        <div class="mb-3">
+                            <label for="editDueDate" class="form-label">Due Date</label>
+                            <input type="date" class="form-control" id="editDueDate" required>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Save Changes</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
