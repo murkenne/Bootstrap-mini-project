@@ -4,9 +4,76 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/bootstrap.css">
-    <title>Document</title>
+    <title>Task Details</title>
 </head>
 <body>
-    
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+        <div class="container">
+            <a class="navbar-brand" href="#">Task Manager</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="task-dashboard.html">Dashboard</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Container for Task Details -->
+    <div class="container mt-5">
+        <h2 class="text-center mb-4">Task Details</h2>
+        <div class="row justify-content-center">
+            <div class="col-md-8">
+                <!-- Task Details Card -->
+                <div class="card">
+                    <div class="card-header bg-secondary text-white">
+                        <h4 class="card-title">Task Title: <span id="taskTitle">Task Name</span></h4>
+                    </div>
+                    <div class="card-body">
+                        <h6 class="card-subtitle mb-2 text-muted">Due Date: <span id="taskDueDate">2024-11-15</span></h6>
+                        <p class="card-text"><strong>Description:</strong> <span id="taskDescription">Detailed description of the task goes here...</span></p>
+                        <p><strong>Priority:</strong> <span id="taskPriority">High</span></p>
+                    </div>
+                </div>
+
+                <!-- Task Editing Form -->
+                <form class="mt-4">
+                    <h5>Edit Task</h5>
+                    <div class="mb-3">
+                        <label for="editTaskTitle" class="form-label">Edit Task Title</label>
+                        <input type="text" class="form-control" id="editTaskTitle" value="Task Name" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="editTaskDescription" class="form-label">Edit Task Description</label>
+                        <textarea class="form-control" id="editTaskDescription" rows="4" required>Description of the task...</textarea>
+                    </div>
+                    <div class="mb-3">
+                        <label for="editTaskDueDate" class="form-label">Edit Due Date</label>
+                        <input type="date" class="form-control" id="editTaskDueDate" value="2024-11-15" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="editTaskPriority" class="form-label">Edit Priority</label>
+                        <select class="form-select" id="editTaskPriority" required>
+                            <option value="low">Low</option>
+                            <option value="medium">Medium</option>
+                            <option value="high" selected>High</option>
+                        </select>
+                    </div>
+                    <button type="submit" class="btn btn-primary w-100">Save Changes</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-light text-center py-4 mt-5">
+        <p class="mb-0">© 2024 Task Manager. All rights reserved.</p>
+    </footer>
+
+    <script src="js/bootstrap.bundle.js"></script>
 </body>
 </html>
